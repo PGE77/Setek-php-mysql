@@ -1,0 +1,1 @@
+<footer><p>Škola čar a kouzel v bradavicích </p></footer>
