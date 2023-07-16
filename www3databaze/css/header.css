@@ -1,0 +1,43 @@
+/*************
+header
+**************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #060606;
+  height: 70px;
+
+}
+.logo {
+  flex-grow: 1;
+}
+.logo img {
+  width: 50px;
+  margin-left: 20px;
+}
+
+/* Navigace */
+
+nav {
+  margin-right: 30px;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.menu-icon {
+  display: none;
+  margin-right:20px;
+}
+

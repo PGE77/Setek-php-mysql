@@ -12,8 +12,8 @@ $life = null;
 $college = null;
 // if($_SERVER["REQUEST_METHOD"] === "POST")
 if (isset($_POST["odeslat"])) {
-    require "assets/database.php";
-    require "assets/zak.php";
+    require "../assets/database.php";
+    require "../assets/zak.php";
     $connection = connectionDB();
 
     $first_name = $_POST["first_name"];
@@ -46,23 +46,13 @@ if (isset($_POST["odeslat"])) {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="cs">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <?php require "assets/header.php"; ?>
+    <?php require "../assets/admin-header.php"; ?>
 
     <main>
 
         <section class="add-form">
-            <?php require "assets/formular-zak.php";  ?>
+            <?php require "../assets/formular-zak.php";  ?>
 
         </section>
 
@@ -73,7 +63,4 @@ if (isset($_POST["odeslat"])) {
 
 
 
-    <?php require "assets/footer.php"; ?>
-</body>
-
-</html>
+    <?php require "../assets/footer.php"; ?>

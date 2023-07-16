@@ -65,7 +65,7 @@ function updateStudent($connection, $first_name, $second_name, $age, $life, $col
         mysqli_stmt_bind_param($stmt, "ssissi", $first_name, $second_name, $age, $life, $college, $id);
         if (mysqli_stmt_execute($stmt)) {
             // echo "Informace o žákovi byly aktualizovány";
-            redirectUrl("/www1/www3databaze/jeden-zak.php?id=$id");
+            redirectUrl("/www1/www3databaze/admin/jeden-zak.php?id=$id");
         }
     }
 }
@@ -98,7 +98,7 @@ function deleteStudent($connection, $id)
         // vykonej pokud je true
         if (mysqli_stmt_execute($stmt)) {
             // získat spojení a dotaz 
-            redirectUrl("/www1/www3databaze/zaci.php");
+            redirectUrl("/www1/www3databaze/admin/zaci.php");
         }
     }
 }
@@ -170,7 +170,7 @@ function createStudent($connection, $first_name, $second_name, $age, $life, $col
              $id = mysqli_insert_id($connection);
              echo "Úspěšně vložen žák s id: $id";
            
-             redirectUrl("/www1/www3databaze/jeden-zak.php?id=$id");
+             redirectUrl("/www1/www3databaze/admin/jeden-zak.php?id=$id");
 
             } else {
                 echo mysqli_stmt_error($statement);

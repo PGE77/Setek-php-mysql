@@ -1,6 +1,3 @@
-
-
-
 <!--
 
 CRUD =
@@ -12,27 +9,18 @@ delete - vymazat záznam -->
 
 
 
-<!DOCTYPE html>
-<html lang="cs">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php require "assets/header.php"; ?>
 
-<body>
-   <?php require "assets/header.php"; ?>
-    <main>
-        <section class="main-heading">
-            <h1>Škola čar a kouzel v Bradavicích</h1>
-        </section>
-        <section>
-            <a href="/www1/www3databaze/zaci.php">Seznam všech žáků</a>
-        </section>
-    </main>
-    <?php require "assets/footer.php"; ?>
-</body>
+<main>
+    <section class="main-heading">
 
-</html>
+        <img src="./img/hogwarts-logo.png" alt="Bradavice logo">
+        <h1>Škola čar a&nbsp;kouzel</h1>
+        <h2>Bradavice</h2>
+    </section>
+    <section>
+        <a href="/www1/www3databaze/admin/zaci.php">Seznam všech žáků</a>
+    </section>
+</main>
+<?php require "assets/footer.php"; ?>

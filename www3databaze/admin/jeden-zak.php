@@ -1,6 +1,6 @@
 <?php
-require "assets/database.php";
-require "assets/zak.php";
+require "../assets/database.php";
+require "../assets/zak.php";
 
 
 $connection = connectionDB();
@@ -47,21 +47,11 @@ if (isset($_GET["id"]) and is_numeric($_GET['id'])) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="cs">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <?php require "assets/header.php"; ?>
+    <?php require "../assets/admin-header.php"; ?>
     <main>
         <section class="main-heading">
-            <h1>Seznam žáků školy</h1>
+            <h1>Detail žáka školy</h1>
         </section>
         <section>
 
@@ -76,12 +66,9 @@ if (isset($_GET["id"]) and is_numeric($_GET['id'])) {
             <?php endif; ?>
         </section>
         <section class="buttons">
-            <a href="editace-zaka.php?id=<?php echo $students['id']; ?>">Editovat žáka</a>
-            <a href="delete-zak.php?id=<?php echo $students['id']; ?>">Vymazat žáka</a></section:>
+            <a href="/www1/www3databaze/admin/editace-zaka.php?id=<?php echo $students['id']; ?>">Editovat žáka</a>
+            <a href="/www1/www3databaze/admin/delete-zak.php?id=<?php echo $students['id']; ?>">Vymazat žáka</a></section:>
 
         </section>
     </main>
-    <?php require "assets/footer.php"; ?>
-</body>
-
-</html>
+    <?php require "../assets/footer.php"; ?>

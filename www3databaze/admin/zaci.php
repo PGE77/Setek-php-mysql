@@ -1,26 +1,16 @@
 <?php
-require "assets/database.php";
-require "assets/zak.php";
+require "../assets/database.php";
+require "../assets/zak.php";
 $connection = connectionDB();
 
 // specifikace sloupečků pro zrychlení databáze
 $students = getAllStudents($connection, "id, first_name, second_name");
 ?>
-<!DOCTYPE html>
-<html lang="cs">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <?php require "assets/header.php"; ?>
+    <?php require "../assets/admin-header.php"; ?>
     <main>
         <section class="main-heading">
-            <h1>Škola čar a kouzel v Bradavicích</h1>
+            <h1>Seznam žáků</h1>
         </section>
 
         <section class="student-list">
@@ -37,7 +27,7 @@ $students = getAllStudents($connection, "id, first_name, second_name");
                     <?php foreach ($students as $student) : ?>
                         <li><?php echo htmlspecialchars($student["first_name"]) . " " . htmlspecialchars($student["second_name"]);  ?>
 
-                            <a href="/www1/www3databaze/jeden-zak.php?id=<?php echo $student['id']; ?>">Více informací</a>
+                            <a href="/www1/www3databaze/admin/jeden-zak.php?id=<?php echo $student['id']; ?>">Více informací</a>
                         </li>
 
                     <?php endforeach; ?>
@@ -54,7 +44,4 @@ $students = getAllStudents($connection, "id, first_name, second_name");
 
     </main>
 
-    <?php require "assets/footer.php"; ?>
-</body>
-
-</html>
+    <?php require "../assets/footer.php"; ?>
